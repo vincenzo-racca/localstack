@@ -46,41 +46,43 @@ This demo application showcases how to:
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/your-repository/localstack-demo.git
+git clone https://github.com/vincenzo-racca/localstack.git
 cd localstack
 ```
 
 ### Step 2: Set Up LocalStack
-1. Ensure the `docker-compose.yaml` file is present in the root directory.
-2. Start LocalStack using Podman Compose:
+1. From the root directory, start LocalStack using Podman Compose:
    ```bash
    podman compose up -d
+   ```
+   or Docker Compose:
+   ```bash
+   docker compose up -d
    ```
 
 ### Step 3: Verify LocalStack is Running
 Check the logs to ensure LocalStack has started correctly:
 ```bash
-podman logs localstack
+podman compose logs localstack
 ```
-
-### Step 4: Run the Initialization Script
-The script `init-aws.sh` will create an SQS Queue and a DynamoDB Table in LocalStack:
+or
 ```bash
-chmod +x config/init-aws.sh
-./config/init-aws.sh
+docker compose logs localstack
 ```
 
-### Step 5: Build and Run the Java Application
-Build the Java application using Maven and run it:
+### Step 4: Build and Run the Java Application
+Run the Java application using the Maven wrapper:
 ```bash
-mvn clean install
-java -jar target/localstack-demo.jar
+./mvnw clean spring-boot:run
 ```
 
-### Step 6: Test the Application
+### Step 5: Test the Application
 Use the application to:
 - Send messages to the SQS Queue.
 - Query or insert data into the DynamoDB Table.
+- Monitor AWS resources created with LocalStack by going to [LocalStack cloud](https://app.localstack.cloud/inst/default/resources)
+
+<img src="localstack-screen.webp" alt="drawing" width="700"/>
 
 ---
 
@@ -88,6 +90,10 @@ Use the application to:
 To stop LocalStack and clean up resources:
 ```bash
 podman compose down
+```
+or
+```bash
+docker compose down
 ```
 
 ---
