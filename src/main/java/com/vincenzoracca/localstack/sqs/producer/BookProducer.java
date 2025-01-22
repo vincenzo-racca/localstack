@@ -2,7 +2,6 @@ package com.vincenzoracca.localstack.sqs.producer;
 
 import com.vincenzoracca.localstack.model.Book;
 import io.awspring.cloud.sqs.operations.SqsTemplate;
-import lombok.RequiredArgsConstructor;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
