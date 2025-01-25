@@ -26,9 +26,10 @@ LocalStack is a powerful tool for local development and testing of AWS applicati
 ## Features of this Demo
 
 This demo application showcases how to:
-1. Create and interact with an **SQS Queue**.
+1. Create and interact with a **SQS Queue**.
 2. Set up and query a **DynamoDB Table**.
-3. Use **Spring Cloud AWS** to interact with SQS and DynamoDB seamlessly.
+3. Create and interact with a**Parameter Store**.
+4. Use **Spring Cloud AWS** to interact with those AWS tools seamlessly.
 
 ---
 
