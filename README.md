@@ -4,6 +4,9 @@ This application demonstrates how to use **LocalStack**, a fully functional loca
 
 ---
 
+## Link LocalStack tutorial
+Read my article on the complete Localstack tutorial: https://www.vincenzoracca.com/en/blog/framework/spring/localstack/
+
 ## What is LocalStack?
 
 LocalStack is a powerful tool for local development and testing of AWS applications. It provides a lightweight and fast alternative to interacting with AWS services by emulating their APIs and behaviors locally. Developers can run their applications using LocalStack without the need for actual AWS credentials or internet access.
