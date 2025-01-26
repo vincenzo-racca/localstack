@@ -31,7 +31,9 @@ public class DbInitializer {
 
         dynamoDbTemplate.save(entity);
 
-        Person entityFromDb = dynamoDbTemplate.load(Key.builder().partitionValue(id.toString()).build(), Person.class);
+        Person entityFromDb = dynamoDbTemplate.load(
+                Key.builder().partitionValue(id.toString()).build(),
+                Person.class);
 
         log.info("Found Person from DynamoDb: {}", entityFromDb);
     }
