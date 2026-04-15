@@ -29,6 +29,8 @@
 	<properties>
 		<java.version>25</java.version>
 		<spring-cloud-aws.version>3.3.0</spring-cloud-aws.version>
+		<bp.jvm.version>${java.version}</bp.jvm.version>
+		<bp.jvm.cds.enabled>false</bp.jvm.cds.enabled>
 	</properties>
 
 	<dependencyManagement>
@@ -79,8 +81,8 @@
 				<configuration>
 					<image>
 						<env>
-							<BP_JVM_VERSION>25</BP_JVM_VERSION>
-							<BP_JVM_CDS_ENABLED>true</BP_JVM_CDS_ENABLED>
+							<BP_JVM_VERSION>${bp.jvm.version}</BP_JVM_VERSION>
+							<BP_JVM_CDS_ENABLED>${bp.jvm.cds.enabled}</BP_JVM_CDS_ENABLED>
 						</env>
 					</image>
 				</configuration>
