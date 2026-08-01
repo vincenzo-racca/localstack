@@ -16,7 +16,7 @@ aws dynamodb create-table \
 
 echo "Create Parameter Store"
 aws ssm put-parameter \
-    --name "config/localstack/env-value" \
+    --name "/config/localstack/env-value" \
     --value "local" \
     --type String \
     --endpoint-url http://localhost:4566
